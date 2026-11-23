@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/LTSuperior-SemiBold.woff2" as="font" type="font/woff2"
-        crossorigin="anonymous">
-    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/LTSuperior-Medium.woff2" as="font" type="font/woff2"
-        crossorigin="anonymous">
-    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/LTSuperior-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/LTSuperior-SemiBold.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/LTSuperior-Medium.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/fonts/LTSuperior-Bold.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico">
     <meta name="description"
         content="OKKO-Service in Perl: truck, trailer and car transporter repair, advanced truck electronics and 24/7 roadside assistance on the A8 and A64.">
@@ -30,9 +31,11 @@
         src="<?php echo get_template_directory_uri(); ?>/assets/js/advantages.min.js?v=1792417478693"></script>
     <link rel="stylesheet" crossorigin=""
         href="<?php echo get_template_directory_uri(); ?>/assets/css/style.min.css?v=1792417478693">
+    <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <div class="wrapper">
         <header data-att-header="" data-att-header-scroll="100" class="header">
             <div class="header__container">
@@ -59,8 +62,8 @@
                                         aria-expanded="false" aria-controls="header-services">Services</a>
                                     <ul class="menu__sub" id="header-services" hidden>
                                         <li>
-                                            <a href="/engine/" class="menu__sublink"
-                                                aria-label="Engine Repair">Engine Repair</a>
+                                            <a href="/engine/" class="menu__sublink" aria-label="Engine Repair">Engine
+                                                Repair</a>
                                         </li>
                                         <li>
                                             <a href="/suspension/" class="menu__sublink"

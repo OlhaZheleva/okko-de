@@ -1,0 +1,19 @@
+<section data-att-brands="" class="brands brands--narrow">
+    <div class="brands__container">
+        <h2 data-att-watcher="" data-att-watcher-once="" data-att-watcher-threshold="0.1" class="brands__title title reveal"><?php esc_html_e( 'Brands We Work With', 'okko' ); ?></h2>
+        <ul data-att-watcher="" data-att-watcher-once="" data-att-watcher-threshold="0.1" class="brands__list reveal">
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/man.svg' ); ?>" width="80" height="45" alt="MAN" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/mercedes-benz.svg' ); ?>" width="80" height="80" alt="Mercedes-Benz" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/renault.svg' ); ?>" width="61" height="80" alt="Renault Trucks" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/scania.svg' ); ?>" width="80" height="77" alt="Scania" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/volvo.svg' ); ?>" width="80" height="80" alt="Volvo" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" width="128" height="66" alt="Rolfo" loading="lazy" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/logo-r-shield.webp' ); ?>"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/kassbohrer.svg' ); ?>" width="182" height="24" alt="Kässbohrer" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/daf.svg' ); ?>" width="116" height="32" alt="DAF" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/iveco.svg' ); ?>" width="154" height="26" alt="IVECO" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/schmitz-cargobull.svg' ); ?>" width="177" height="59" alt="Schmitz Cargobull" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/krone.svg' ); ?>" width="185" height="31" alt="Krone" loading="lazy"></li>
+            <li class="brands__card card card--flat-mobile"><img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/brands/schwarzmueller.svg' ); ?>" width="200" height="26" alt="Schwarzmüller" loading="lazy"></li>
+        </ul>
+    </div>
+</section>

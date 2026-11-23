@@ -1,0 +1,42 @@
+# .github/workflows/deploy.yml
+# Деплой теми okko на Hostinger по FTP при пуші в main.
+# Репозиторій = папка теми, тому на сервер іде лише тема.
+
+name: Deploy theme to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # ручний запуск з вкладки Actions
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload theme via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }} # ftp.okko-service.de
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          # Шлях відносно кореня FTP-акаунта.
+          # Акаунт з коренем public_html:            wp-content/themes/okko/
+          # Окремий акаунт з коренем у папці теми:  ./
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            **/node_modules/**
+            **/.DS_Store
+            *.zip
+            README.md

@@ -1,0 +1,47 @@
+{
+    "key": "group_okko_services",
+    "title": "Page: Services",
+    "fields": [
+        { "key": "field_okko_services_tab_hero", "label": "Hero", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_services_show_hero", "label": "Show Hero Section", "name": "show_hero", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_services_hero_desktop_image", "label": "Desktop Image", "name": "hero_desktop_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_services_hero_mobile_image", "label": "Mobile Image", "name": "hero_mobile_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_services_hero_title", "label": "Title", "name": "hero_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_services_hero_text", "label": "Text", "name": "hero_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" },
+        { "key": "field_okko_services_hero_call_label", "label": "Call Button Label", "name": "hero_call_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+
+        { "key": "field_okko_services_tab_catalog", "label": "Catalog", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_services_show_catalog", "label": "Show Catalog Section", "name": "show_catalog", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_services_catalog_groups", "label": "Service Categories", "name": "catalog_groups", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "block", "button_label": "Add Category", "min": 0, "max": 0, "collapsed": "field_okko_services_catalog_groups_title", "sub_fields": [
+            { "key": "field_okko_services_catalog_groups_title", "label": "Category Title", "name": "title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_services_catalog_groups" },
+            { "key": "field_okko_services_catalog_groups_services", "label": "Services", "name": "services", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "table", "button_label": "Add Service", "min": 0, "max": 0, "sub_fields": [
+                { "key": "field_okko_services_catalog_groups_services_title", "label": "Title", "name": "title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_services_catalog_groups_services" },
+                { "key": "field_okko_services_catalog_groups_services_text", "label": "Description", "name": "text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br", "parent_repeater": "field_okko_services_catalog_groups_services" },
+                { "key": "field_okko_services_catalog_groups_services_link", "label": "Service Link", "name": "link", "type": "link", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "return_format": "array", "parent_repeater": "field_okko_services_catalog_groups_services" }
+            ], "parent_repeater": "field_okko_services_catalog_groups" }
+        ] },
+
+        { "key": "field_okko_services_tab_breakdown", "label": "Breakdown", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_services_show_breakdown", "label": "Show Breakdown Section", "name": "show_breakdown", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_services_breakdown_title", "label": "Title", "name": "breakdown_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_services_breakdown_label", "label": "Label", "name": "breakdown_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_services_breakdown_text", "label": "Text", "name": "breakdown_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" },
+        { "key": "field_okko_services_breakdown_info_link", "label": "How It Works Link", "name": "breakdown_info_link", "type": "link", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "return_format": "array" },
+        { "key": "field_okko_services_breakdown_list_title", "label": "Checklist Title", "name": "breakdown_list_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_services_breakdown_items", "label": "Breakdown Checklist", "name": "breakdown_items", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "block", "button_label": "Add Item", "min": 0, "max": 0, "collapsed": "field_okko_services_breakdown_items_text", "sub_fields": [
+            { "key": "field_okko_services_breakdown_items_icon", "label": "Icon", "name": "icon", "type": "select", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "33", "class": "", "id": "" }, "choices": { "truck": "Truck", "location": "Location", "flash": "Warning Light", "clock": "Clock" }, "default_value": "truck", "allow_null": 0, "multiple": 0, "ui": 1, "ajax": 0, "return_format": "value", "parent_repeater": "field_okko_services_breakdown_items" },
+            { "key": "field_okko_services_breakdown_items_text", "label": "Text", "name": "text", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_services_breakdown_items" }
+        ] }
+    ],
+    "location": [[{ "param": "page_template", "operator": "==", "value": "templates/page-services.php" }]],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ["the_content"],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794480300
+}

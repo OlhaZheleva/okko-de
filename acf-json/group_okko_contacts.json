@@ -26,7 +26,7 @@
         },
         {
             "key": "field_okko_contacts_contact_phone_caption",
-            "label": "Phone caption",
+            "label": "Phone caption (EN)",
             "name": "contact_phone_caption",
             "type": "text",
             "instructions": "",
@@ -40,7 +40,7 @@
         },
         {
             "key": "field_okko_contacts_contact_address",
-            "label": "Address",
+            "label": "Address (EN)",
             "name": "contact_address",
             "type": "text",
             "instructions": "",
@@ -54,7 +54,7 @@
         },
         {
             "key": "field_okko_contacts_contact_opening_hours",
-            "label": "Opening hours",
+            "label": "Opening hours (EN)",
             "name": "contact_opening_hours",
             "type": "text",
             "instructions": "",
@@ -68,7 +68,7 @@
         },
         {
             "key": "field_okko_contacts_contact_opening_hours_caption",
-            "label": "Opening-hours caption",
+            "label": "Opening-hours caption (EN)",
             "name": "contact_opening_hours_caption",
             "type": "text",
             "instructions": "",
@@ -82,7 +82,7 @@
         },
         {
             "key": "field_okko_contacts_contact_directions_note",
-            "label": "Directions note",
+            "label": "Directions note (EN)",
             "name": "contact_directions_note",
             "type": "text",
             "instructions": "",
@@ -138,7 +138,7 @@
         },
         {
             "key": "field_okko_contacts_contact_directions_link",
-            "label": "Directions button",
+            "label": "Directions button (EN)",
             "name": "contact_directions_link",
             "type": "link",
             "instructions": "",
@@ -149,6 +149,144 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "array"
+        },
+        {
+            "key": "field_okko_contacts_tab_contacts_de",
+            "label": "Contacts (DE)",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_contacts_contact_phone_caption_de",
+            "label": "Phone caption (DE)",
+            "name": "contact_phone_caption_de",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_address_de",
+            "label": "Address (DE)",
+            "name": "contact_address_de",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_opening_hours_de",
+            "label": "Opening hours (DE)",
+            "name": "contact_opening_hours_de",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_opening_hours_caption_de",
+            "label": "Opening-hours caption (DE)",
+            "name": "contact_opening_hours_caption_de",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_directions_note_de",
+            "label": "Directions note (DE)",
+            "name": "contact_directions_note_de",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_directions_link_de",
+            "label": "Directions button (DE)",
+            "name": "contact_directions_link_de",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "return_format": "array"
+        },
+        {
+            "key": "field_okko_contacts_tab_contacts_lt",
+            "label": "Contacts (LT)",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_contacts_contact_phone_caption_lt",
+            "label": "Phone caption (LT)",
+            "name": "contact_phone_caption_lt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_address_lt",
+            "label": "Address (LT)",
+            "name": "contact_address_lt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_opening_hours_lt",
+            "label": "Opening hours (LT)",
+            "name": "contact_opening_hours_lt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_opening_hours_caption_lt",
+            "label": "Opening-hours caption (LT)",
+            "name": "contact_opening_hours_caption_lt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_directions_note_lt",
+            "label": "Directions note (LT)",
+            "name": "contact_directions_note_lt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_contacts_contact_directions_link_lt",
+            "label": "Directions button (LT)",
+            "name": "contact_directions_link_lt",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
             "return_format": "array"
         }
     ],

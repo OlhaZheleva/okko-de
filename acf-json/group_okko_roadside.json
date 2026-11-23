@@ -1,0 +1,79 @@
+{
+    "key": "group_okko_roadside",
+    "title": "Page: Roadside Assistance",
+    "fields": [
+        { "key": "field_okko_roadside_tab_hero", "label": "Hero", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_roadside_show_hero", "label": "Show Hero Section", "name": "show_hero", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_roadside_hero_desktop_image", "label": "Desktop Image", "name": "hero_desktop_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_roadside_hero_mobile_image", "label": "Mobile Image", "name": "hero_mobile_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_roadside_hero_title", "label": "Title", "name": "hero_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_hero_text", "label": "Text", "name": "hero_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" },
+        { "key": "field_okko_roadside_hero_call_label", "label": "Call Button Label", "name": "hero_call_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+
+        { "key": "field_okko_roadside_tab_help", "label": "Help", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_roadside_show_help", "label": "Show Help Section", "name": "show_help", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_roadside_help_title", "label": "Title", "name": "help_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_help_label", "label": "Label", "name": "help_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_help_items", "label": "Help Options", "name": "help_items", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "block", "button_label": "Add Option", "min": 0, "max": 0, "collapsed": "field_okko_roadside_help_items_title", "sub_fields": [
+            { "key": "field_okko_roadside_help_items_badge", "label": "Badge", "name": "badge", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "parent_repeater": "field_okko_roadside_help_items" },
+            { "key": "field_okko_roadside_help_items_badge_style", "label": "Badge Style", "name": "badge_style", "type": "select", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "choices": { "default": "Default", "dark": "Dark" }, "default_value": "default", "allow_null": 0, "multiple": 0, "ui": 1, "ajax": 0, "return_format": "value", "parent_repeater": "field_okko_roadside_help_items" },
+            { "key": "field_okko_roadside_help_items_title", "label": "Title", "name": "title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_roadside_help_items" },
+            { "key": "field_okko_roadside_help_items_text", "label": "Text", "name": "text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br", "parent_repeater": "field_okko_roadside_help_items" },
+            { "key": "field_okko_roadside_help_items_note", "label": "Note", "name": "note", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br", "parent_repeater": "field_okko_roadside_help_items" }
+        ] },
+
+        { "key": "field_okko_roadside_tab_coverage", "label": "Coverage", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_roadside_show_coverage", "label": "Show Coverage Section", "name": "show_coverage", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_roadside_coverage_title", "label": "Section Title", "name": "coverage_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_coverage_area_title", "label": "Coverage Card Title", "name": "coverage_area_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_coverage_places", "label": "Coverage Places", "name": "coverage_places", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "table", "button_label": "Add Place", "min": 0, "max": 0, "sub_fields": [
+            { "key": "field_okko_roadside_coverage_places_text", "label": "Place", "name": "text", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_roadside_coverage_places" }
+        ] },
+        { "key": "field_okko_roadside_coverage_hotline_badge", "label": "Hotline Badge", "name": "coverage_hotline_badge", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_coverage_hotline_text", "label": "Hotline Text", "name": "coverage_hotline_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" },
+
+        { "key": "field_okko_roadside_tab_vehicles", "label": "Common Breakdowns", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_roadside_show_vehicles", "label": "Show Common Breakdowns Section", "name": "show_vehicles", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_roadside_vehicles_title", "label": "Section Title", "name": "vehicles_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_vehicle_items", "label": "Breakdown Cards", "name": "vehicle_items", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "block", "button_label": "Add Card", "min": 0, "max": 0, "collapsed": "field_okko_roadside_vehicle_items_title", "sub_fields": [
+            { "key": "field_okko_roadside_vehicle_items_title", "label": "Title", "name": "title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_roadside_vehicle_items" },
+            { "key": "field_okko_roadside_vehicle_items_text", "label": "Text", "name": "text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br", "parent_repeater": "field_okko_roadside_vehicle_items" },
+            { "key": "field_okko_roadside_vehicle_items_link", "label": "Service Link", "name": "link", "type": "link", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "return_format": "array", "parent_repeater": "field_okko_roadside_vehicle_items" },
+            { "key": "field_okko_roadside_vehicle_items_button_label", "label": "Button Label", "name": "button_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_roadside_vehicle_items" }
+        ] },
+
+        { "key": "field_okko_roadside_tab_instructions", "label": "Instructions", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_roadside_show_instructions", "label": "Show Instructions Section", "name": "show_instructions", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_roadside_instructions_desktop_image", "label": "Desktop Image", "name": "instructions_desktop_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_roadside_instructions_mobile_image", "label": "Mobile Image", "name": "instructions_mobile_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_roadside_instructions_image_alt", "label": "Image Alt Text", "name": "instructions_image_alt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_instructions_title", "label": "Title", "name": "instructions_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_instruction_items", "label": "Steps", "name": "instruction_items", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "block", "button_label": "Add Step", "min": 0, "max": 0, "collapsed": "field_okko_roadside_instruction_items_text", "sub_fields": [
+            { "key": "field_okko_roadside_instruction_items_text", "label": "Step Text", "name": "text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br", "parent_repeater": "field_okko_roadside_instruction_items" }
+        ] },
+
+        { "key": "field_okko_roadside_tab_faq", "label": "FAQ", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_roadside_show_faq", "label": "Show FAQ Section", "name": "show_faq", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_roadside_faq_title", "label": "Title", "name": "faq_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_faq_items", "label": "Questions and Answers", "name": "faq_items", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "block", "button_label": "Add Question", "min": 0, "max": 0, "collapsed": "field_okko_roadside_faq_items_question", "sub_fields": [
+            { "key": "field_okko_roadside_faq_items_question", "label": "Question", "name": "question", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_roadside_faq_items" },
+            { "key": "field_okko_roadside_faq_items_answer", "label": "Answer", "name": "answer", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br", "parent_repeater": "field_okko_roadside_faq_items" }
+        ] },
+
+        { "key": "field_okko_roadside_tab_request", "label": "Request", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_roadside_show_request", "label": "Show Request Section", "name": "show_request", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_roadside_request_label", "label": "Section Label", "name": "request_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" } },
+        { "key": "field_okko_roadside_request_title", "label": "Title", "name": "request_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" } }
+    ],
+    "location": [[{ "param": "page_template", "operator": "==", "value": "templates/page-roadside.php" }]],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ["the_content"],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794480056
+}

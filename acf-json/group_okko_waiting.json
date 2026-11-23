@@ -1,0 +1,42 @@
+{
+    "key": "group_okko_waiting",
+    "title": "Page: Waiting",
+    "fields": [
+        { "key": "field_okko_waiting_tab_hero", "label": "Hero", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_waiting_show_hero", "label": "Show Hero Section", "name": "show_hero", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_waiting_hero_desktop_image", "label": "Desktop Image", "name": "hero_desktop_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_waiting_hero_mobile_image", "label": "Mobile Image", "name": "hero_mobile_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_waiting_hero_image_alt", "label": "Image Alt Text", "name": "hero_image_alt", "type": "text", "instructions": "",
+            "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_waiting_hero_title", "label": "Title", "name": "hero_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_waiting_hero_text", "label": "Text", "name": "hero_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" },
+
+        { "key": "field_okko_waiting_tab_facilities", "label": "Facilities", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_waiting_show_facilities", "label": "Show Facilities Section", "name": "show_facilities", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_waiting_facility_items", "label": "Facilities", "name": "facility_items", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "layout": "block", "button_label": "Add Facility", "min": 0, "max": 0, "collapsed": "field_okko_waiting_facility_items_title", "sub_fields": [
+            { "key": "field_okko_waiting_facility_items_desktop_image", "label": "Desktop Image", "name": "desktop_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all", "parent_repeater": "field_okko_waiting_facility_items" },
+            { "key": "field_okko_waiting_facility_items_mobile_image", "label": "Mobile Image", "name": "mobile_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all", "parent_repeater": "field_okko_waiting_facility_items" },
+            { "key": "field_okko_waiting_facility_items_alt", "label": "Image Alt Text", "name": "alt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_waiting_facility_items" },
+            { "key": "field_okko_waiting_facility_items_title", "label": "Title", "name": "title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_waiting_facility_items" },
+            { "key": "field_okko_waiting_facility_items_text", "label": "Text", "name": "text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br", "parent_repeater": "field_okko_waiting_facility_items" }
+        ] },
+
+        { "key": "field_okko_waiting_tab_request", "label": "Request Info", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_waiting_show_request", "label": "Show Request Section", "name": "show_request", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_waiting_request_call_badge", "label": "Phone Card Badge", "name": "request_call_badge", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_waiting_request_call_text", "label": "Phone Card Text", "name": "request_call_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" },
+        { "key": "field_okko_waiting_request_next_title", "label": "Next Steps Title", "name": "request_next_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_waiting_request_next_text", "label": "Next Steps Text", "name": "request_next_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" }
+    ],
+    "location": [[{ "param": "page_template", "operator": "==", "value": "templates/page-waiting.php" }]],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ["the_content"],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794486393
+}

@@ -8,8 +8,8 @@
 add_filter('use_block_editor_for_post_type', '__return_false');
 
 register_nav_menus( array( // Регистрируем 2 меню
-	'top' => 'Верхнее меню',
-	'left' => 'Нижнее'
+	'footer_services' => 'Footer: Services',
+	'footer_company' => 'Footer: Company',
 ) );
 
 add_theme_support('post-thumbnails');
@@ -18,6 +18,10 @@ add_image_size('161-234', 161, 234, false);
 
 require_once get_template_directory() . '/inc/acf.php';
 require_once get_template_directory() . '/inc/acf-helpers.php';
+require_once get_template_directory() . '/inc/menus.php';
+require_once get_template_directory() . '/inc/cpt.php';
+require_once get_template_directory() . '/inc/services.php';
+require_once get_template_directory() . '/inc/enqueue.php';
 
  
 // add svg format

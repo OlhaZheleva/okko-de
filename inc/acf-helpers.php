@@ -9,6 +9,49 @@ function okko_text( $name, $fallback = '', $post_id = false ) {
     return ( $v !== null && $v !== '' && $v !== false ) ? $v : $fallback;
 }
 
+function okko_section_is_visible( $name, $post_id = false ) {
+    if ( ! function_exists( 'get_field' ) ) {
+        return true;
+    }
+
+    $value = get_field( $name, $post_id );
+    return ( null === $value || '' === $value ) ? true : (bool) $value;
+}
+
+function okko_show( $name, $post_id = false ) {
+    if ( ! function_exists( 'get_field' ) ) {
+        return true;
+    }
+
+    $value = get_field( $name, $post_id );
+    return ( null === $value || '' === $value ) ? true : (bool) $value;
+}
+
+function okko_language_code() {
+    if ( function_exists( 'pll_current_language' ) ) {
+        $language = pll_current_language( 'slug' );
+    } elseif ( has_filter( 'wpml_current_language' ) ) {
+        $language = apply_filters( 'wpml_current_language', null );
+    } else {
+        $locale = function_exists( 'determine_locale' ) ? determine_locale() : get_locale();
+        $language = strtolower( substr( $locale, 0, 2 ) );
+    }
+
+    return in_array( $language, [ 'en', 'de', 'lt' ], true ) ? $language : 'en';
+}
+
+function okko_language_field( $name, $fallback = '', $post_id = false ) {
+    $language = okko_language_code();
+    $field_name = 'en' === $language ? $name : $name . '_' . $language;
+    $value = function_exists( 'get_field' ) ? get_field( $field_name, $post_id ) : null;
+
+    if ( ( null === $value || '' === $value || false === $value || [] === $value ) && $field_name !== $name ) {
+        $value = function_exists( 'get_field' ) ? get_field( $name, $post_id ) : null;
+    }
+
+    return ( null !== $value && '' !== $value && false !== $value && [] !== $value ) ? $value : $fallback;
+}
+
 // Image: ACF image array or the original src/alt.
 function okko_img( $name, $fallback_src, $fallback_alt = '', $post_id = false ) {
     $img = function_exists( 'get_field' ) ? get_field( $name, $post_id ) : null;

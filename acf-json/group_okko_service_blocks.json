@@ -1,0 +1,71 @@
+{
+    "key": "group_okko_service_blocks",
+    "title": "Options: Service Blocks",
+    "fields": [
+        { "key": "field_okko_service_blocks_tab_en", "label": "English", "name": "", "type": "tab", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_service_blocks_message_en", "label": "Section Note", "name": "", "type": "message", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "message": "Texts shown on every service page in English, unless the service overrides them. Empty fields fall back to the built-in English texts.", "new_lines": "wpautop", "esc_html": 0 },
+        { "key": "field_okko_service_blocks_service_card_badge", "label": "Contact Card: Badge", "name": "service_card_badge", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_card_text", "label": "Contact Card: Text", "name": "service_card_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
+        { "key": "field_okko_service_blocks_service_card_button", "label": "Contact Card: Button Label", "name": "service_card_button", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_title", "label": "Breakdown: Title", "name": "service_breakdown_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_label", "label": "Breakdown: Label", "name": "service_breakdown_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_text", "label": "Breakdown: Text", "name": "service_breakdown_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
+        { "key": "field_okko_service_blocks_service_breakdown_button", "label": "Breakdown: \"How it works\" Button Label", "name": "service_breakdown_button", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_list_title", "label": "Breakdown: List Title", "name": "service_breakdown_list_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        {
+            "key": "field_okko_service_blocks_service_breakdown_items", "label": "Breakdown: List Items", "name": "service_breakdown_items", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" },
+            "layout": "block", "button_label": "Add Item", "min": 0, "max": 0, "collapsed": "field_okko_service_blocks_service_breakdown_items_text",
+            "sub_fields": [
+                { "key": "field_okko_service_blocks_service_breakdown_items_icon", "label": "Icon", "name": "icon", "type": "select", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "33", "class": "", "id": "" }, "choices": { "truck": "Truck", "location": "Location", "flash": "Warning Light", "clock": "Clock" }, "default_value": "truck", "allow_null": 0, "multiple": 0, "ui": 1, "ajax": 0, "return_format": "value", "parent_repeater": "field_okko_service_blocks_service_breakdown_items" },
+                { "key": "field_okko_service_blocks_service_breakdown_items_text", "label": "Text", "name": "text", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_service_blocks_service_breakdown_items" }
+            ]
+        },
+        { "key": "field_okko_service_blocks_tab_de", "label": "German", "name": "", "type": "tab", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_service_blocks_message_de", "label": "Section Note", "name": "", "type": "message", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "message": "Texts shown on every service page in German, unless the service overrides them. Empty fields fall back to English.", "new_lines": "wpautop", "esc_html": 0 },
+        { "key": "field_okko_service_blocks_service_card_badge_de", "label": "Contact Card: Badge", "name": "service_card_badge_de", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_card_text_de", "label": "Contact Card: Text", "name": "service_card_text_de", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
+        { "key": "field_okko_service_blocks_service_card_button_de", "label": "Contact Card: Button Label", "name": "service_card_button_de", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_title_de", "label": "Breakdown: Title", "name": "service_breakdown_title_de", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_label_de", "label": "Breakdown: Label", "name": "service_breakdown_label_de", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_text_de", "label": "Breakdown: Text", "name": "service_breakdown_text_de", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
+        { "key": "field_okko_service_blocks_service_breakdown_button_de", "label": "Breakdown: \"How it works\" Button Label", "name": "service_breakdown_button_de", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_list_title_de", "label": "Breakdown: List Title", "name": "service_breakdown_list_title_de", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        {
+            "key": "field_okko_service_blocks_service_breakdown_items_de", "label": "Breakdown: List Items", "name": "service_breakdown_items_de", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" },
+            "layout": "block", "button_label": "Add Item", "min": 0, "max": 0, "collapsed": "field_okko_service_blocks_service_breakdown_items_de_text",
+            "sub_fields": [
+                { "key": "field_okko_service_blocks_service_breakdown_items_de_icon", "label": "Icon", "name": "icon", "type": "select", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "33", "class": "", "id": "" }, "choices": { "truck": "Truck", "location": "Location", "flash": "Warning Light", "clock": "Clock" }, "default_value": "truck", "allow_null": 0, "multiple": 0, "ui": 1, "ajax": 0, "return_format": "value", "parent_repeater": "field_okko_service_blocks_service_breakdown_items_de" },
+                { "key": "field_okko_service_blocks_service_breakdown_items_de_text", "label": "Text", "name": "text", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_service_blocks_service_breakdown_items_de" }
+            ]
+        },
+        { "key": "field_okko_service_blocks_tab_lt", "label": "Lithuanian", "name": "", "type": "tab", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_service_blocks_message_lt", "label": "Section Note", "name": "", "type": "message", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "message": "Texts shown on every service page in Lithuanian, unless the service overrides them. Empty fields fall back to English.", "new_lines": "wpautop", "esc_html": 0 },
+        { "key": "field_okko_service_blocks_service_card_badge_lt", "label": "Contact Card: Badge", "name": "service_card_badge_lt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_card_text_lt", "label": "Contact Card: Text", "name": "service_card_text_lt", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
+        { "key": "field_okko_service_blocks_service_card_button_lt", "label": "Contact Card: Button Label", "name": "service_card_button_lt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_title_lt", "label": "Breakdown: Title", "name": "service_breakdown_title_lt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_label_lt", "label": "Breakdown: Label", "name": "service_breakdown_label_lt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_text_lt", "label": "Breakdown: Text", "name": "service_breakdown_text_lt", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
+        { "key": "field_okko_service_blocks_service_breakdown_button_lt", "label": "Breakdown: \"How it works\" Button Label", "name": "service_breakdown_button_lt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        { "key": "field_okko_service_blocks_service_breakdown_list_title_lt", "label": "Breakdown: List Title", "name": "service_breakdown_list_title_lt", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
+        {
+            "key": "field_okko_service_blocks_service_breakdown_items_lt", "label": "Breakdown: List Items", "name": "service_breakdown_items_lt", "type": "repeater", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" },
+            "layout": "block", "button_label": "Add Item", "min": 0, "max": 0, "collapsed": "field_okko_service_blocks_service_breakdown_items_lt_text",
+            "sub_fields": [
+                { "key": "field_okko_service_blocks_service_breakdown_items_lt_icon", "label": "Icon", "name": "icon", "type": "select", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "33", "class": "", "id": "" }, "choices": { "truck": "Truck", "location": "Location", "flash": "Warning Light", "clock": "Clock" }, "default_value": "truck", "allow_null": 0, "multiple": 0, "ui": 1, "ajax": 0, "return_format": "value", "parent_repeater": "field_okko_service_blocks_service_breakdown_items_lt" },
+                { "key": "field_okko_service_blocks_service_breakdown_items_lt_text", "label": "Text", "name": "text", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "parent_repeater": "field_okko_service_blocks_service_breakdown_items_lt" }
+            ]
+        }
+    ],
+    "location": [[{ "param": "options_page", "operator": "==", "value": "theme-settings-service-blocks" }]],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794926535
+}

@@ -1,0 +1,226 @@
+{
+    "key": "group_okko_fleet",
+    "title": "Page: Fleet",
+    "fields": [
+        {
+            "key": "field_okko_fleet_tab_hero",
+            "label": "Hero",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_fleet_show_hero",
+            "label": "Show Hero Section",
+            "name": "show_hero",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_okko_fleet_hero_desktop_image",
+            "label": "Desktop Image",
+            "name": "hero_desktop_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_okko_fleet_hero_mobile_image",
+            "label": "Mobile Image",
+            "name": "hero_mobile_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_okko_fleet_hero_title",
+            "label": "Title",
+            "name": "hero_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_fleet_hero_text",
+            "label": "Text",
+            "name": "hero_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "new_lines": "br"
+        },
+        {
+            "key": "field_okko_fleet_hero_call_label",
+            "label": "Call Button Label",
+            "name": "hero_call_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_fleet_tab_offer",
+            "label": "Offer",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_fleet_show_offer",
+            "label": "Show Offer Section",
+            "name": "show_offer",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_okko_fleet_offer_title",
+            "label": "Title",
+            "name": "offer_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_fleet_offer_items",
+            "label": "Offer Cards",
+            "name": "offer_items",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "layout": "block",
+            "button_label": "Add Offer",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_okko_fleet_offer_items_title",
+            "sub_fields": [
+                {
+                    "key": "field_okko_fleet_offer_items_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": { "width": "33", "class": "", "id": "" },
+                    "choices": {
+                        "receipt": "Receipt",
+                        "road-perspective": "Roadside Assistance",
+                        "warranty": "Warranty"
+                    },
+                    "default_value": "receipt",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "parent_repeater": "field_okko_fleet_offer_items"
+                },
+                {
+                    "key": "field_okko_fleet_offer_items_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": { "width": "", "class": "", "id": "" },
+                    "parent_repeater": "field_okko_fleet_offer_items"
+                },
+                {
+                    "key": "field_okko_fleet_offer_items_text",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": { "width": "", "class": "", "id": "" },
+                    "new_lines": "br",
+                    "parent_repeater": "field_okko_fleet_offer_items"
+                }
+            ]
+        },
+        {
+            "key": "field_okko_fleet_tab_request",
+            "label": "Request",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_fleet_show_request",
+            "label": "Show Request Section",
+            "name": "show_request",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "ui": 1,
+            "default_value": 1
+        },
+        {
+            "key": "field_okko_fleet_request_label",
+            "label": "Section Label",
+            "name": "request_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_fleet_request_title",
+            "label": "Title",
+            "name": "request_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        }
+    ],
+    "location": [[{ "param": "page_template", "operator": "==", "value": "templates/page-fleet.php" }]],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ["the_content"],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794413705
+}
