@@ -598,7 +598,8 @@
                         <?php foreach ( $brand_logos as $brand_logo ) : ?>
                             <?php if ( is_array( $brand_logo ) && ! empty( $brand_logo['url'] ) ) : ?>
                                 <li class="brands__card card card--flat-mobile">
-                                    <img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( $brand_logo['url'] ); ?>" width="<?php echo esc_attr( $brand_logo['width'] ?? 80 ); ?>" height="<?php echo esc_attr( $brand_logo['height'] ?? 45 ); ?>" alt="<?php echo esc_attr( $brand_logo['alt'] ?? '' ); ?>" loading="lazy">
+                                    <?php $brand_logo_size = okko_logo_size( $brand_logo ); ?>
+                                    <img class="brands__logo" data-att-image-sizes-ignore="" src="<?php echo esc_url( $brand_logo['url'] ); ?>" width="<?php echo esc_attr( $brand_logo_size[0] ); ?>" height="<?php echo esc_attr( $brand_logo_size[1] ); ?>" alt="<?php echo esc_attr( ! empty( $brand_logo['alt'] ) ? $brand_logo['alt'] : ( $brand_logo['title'] ?? '' ) ); ?>" loading="lazy">
                                 </li>
                             <?php endif; ?>
                         <?php endforeach; ?>

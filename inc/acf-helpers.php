@@ -69,3 +69,31 @@ function okko_link( $name, $fallback_url, $fallback_title, $post_id = false ) {
     }
     return [ 'url' => $fallback_url, 'title' => $fallback_title, 'target' => '_self' ];
 }
+
+// Logo size for an ACF image array, fitted into a box (default 185x80 — the largest logo in the original markup).
+// SVG uploads have no width/height in WP metadata, so the size is read from the file (width/height or viewBox).
+function okko_logo_size( $image, $max_width = 185, $max_height = 80 ) {
+    $width  = isset( $image['width'] ) ? (int) $image['width'] : 0;
+    $height = isset( $image['height'] ) ? (int) $image['height'] : 0;
+
+    if ( ( $width < 2 || $height < 2 ) && ! empty( $image['ID'] ) ) {
+        $file = get_attached_file( $image['ID'] );
+        if ( $file && 'svg' === strtolower( pathinfo( $file, PATHINFO_EXTENSION ) ) && is_readable( $file ) ) {
+            $svg = file_get_contents( $file, false, null, 0, 4096 );
+            if ( $svg && preg_match( '/viewBox=["\']\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)/i', $svg, $m ) ) {
+                $width  = (float) $m[1];
+                $height = (float) $m[2];
+            } elseif ( $svg && preg_match( '/<svg[^>]*\swidth=["\']([\d.]+)/i', $svg, $w ) && preg_match( '/<svg[^>]*\sheight=["\']([\d.]+)/i', $svg, $h ) ) {
+                $width  = (float) $w[1];
+                $height = (float) $h[1];
+            }
+        }
+    }
+
+    if ( $width < 2 || $height < 2 ) {
+        return array( 80, 80 );
+    }
+
+    $scale = min( $max_width / $width, $max_height / $height );
+    return array( max( 1, (int) round( $width * $scale ) ), max( 1, (int) round( $height * $scale ) ) );
+}
