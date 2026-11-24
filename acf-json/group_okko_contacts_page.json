@@ -2,7 +2,14 @@
     "key": "group_okko_contacts_page",
     "title": "Page: Contacts",
     "fields": [
+        { "key": "field_okko_contacts_page_tab_hero", "label": "Hero", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_contacts_page_show_hero", "label": "Show Hero Section", "name": "show_hero", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_contacts_page_hero_desktop_image", "label": "Desktop Image", "name": "hero_desktop_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_contacts_page_hero_mobile_image", "label": "Mobile Image", "name": "hero_mobile_image", "type": "image", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" }, "return_format": "array", "preview_size": "medium", "library": "all" },
+        { "key": "field_okko_contacts_page_hero_title", "label": "Title", "name": "hero_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" } },
+        { "key": "field_okko_contacts_page_hero_call_label", "label": "Call Button Label", "name": "hero_call_label", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "50", "class": "", "id": "" } },
         { "key": "field_okko_contacts_page_tab_request", "label": "Request", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_contacts_page_show_request", "label": "Show Request Section", "name": "show_request", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
         { "key": "field_okko_contacts_page_request_call_badge", "label": "Phone Card Badge", "name": "request_call_badge", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
         { "key": "field_okko_contacts_page_request_call_text", "label": "Phone Card Text", "name": "request_call_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
         { "key": "field_okko_contacts_page_request_next_title", "label": "Next Steps Title", "name": "request_next_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
@@ -18,5 +25,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1795517187
+    "modified": 1795535161
 }

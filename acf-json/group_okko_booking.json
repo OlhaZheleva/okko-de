@@ -2,7 +2,12 @@
     "key": "group_okko_booking",
     "title": "Page: Booking",
     "fields": [
+        { "key": "field_okko_booking_tab_hero", "label": "Hero", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_booking_show_hero", "label": "Show Hero Section", "name": "show_hero", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
+        { "key": "field_okko_booking_hero_title", "label": "Title", "name": "hero_title", "type": "textarea", "instructions": "Enter each title line on a separate line.", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
+        { "key": "field_okko_booking_hero_text", "label": "Text", "name": "hero_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
         { "key": "field_okko_booking_tab_request", "label": "Request", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
+        { "key": "field_okko_booking_show_request", "label": "Show Request Section", "name": "show_request", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
         { "key": "field_okko_booking_request_call_badge", "label": "Phone Card Badge", "name": "request_call_badge", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
         { "key": "field_okko_booking_request_call_text", "label": "Phone Card Text", "name": "request_call_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
         { "key": "field_okko_booking_request_next_title", "label": "Next Steps Title", "name": "request_next_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
@@ -18,5 +23,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1795517187
+    "modified": 1795535161
 }

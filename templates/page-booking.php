@@ -6,14 +6,37 @@ get_header();
 ?>
 <main class="page">
 	<div data-att-booking="" class="booking">
+		<?php if ( okko_section_is_visible( 'show_hero' ) ) : ?>
 		<section data-att-heromap="" class="heromap">
+			<?php
+			$contact_phone = okko_language_field( 'contact_phone', '+49 160 97322294', 'option' );
+			$contact_phone_number = preg_replace( '/\s+/', '', $contact_phone );
+			$contact_address = okko_language_field( 'contact_address', 'Trierer Str. 51, 66706 Perl', 'option' );
+			$contact_lat = okko_language_field( 'contact_lat', '49.4740', 'option' );
+			$contact_lng = okko_language_field( 'contact_lng', '6.37540', 'option' );
+			$directions_fallback = array(
+				'url' => add_query_arg( array( 'api' => '1', 'destination' => $contact_lat . ',' . $contact_lng ), 'https://www.google.com/maps/dir/' ),
+				'title' => __( 'Get directions', 'okko' ),
+				'target' => '_blank',
+			);
+			$contact_directions = okko_language_field( 'contact_directions_link', $directions_fallback, 'option' );
+			if ( ! is_array( $contact_directions ) || empty( $contact_directions['url'] ) ) {
+				$contact_directions = $directions_fallback;
+			}
+			$contact_directions_title = ! empty( $contact_directions['title'] ) ? $contact_directions['title'] : __( 'Get directions', 'okko' );
+			$map_language = okko_language_code();
+			$map_path = '/assets/img/home/map-' . $map_language . '.svg';
+			if ( ! file_exists( get_template_directory() . $map_path ) ) {
+				$map_path = '/assets/img/home/map-en.svg';
+			}
+			?>
 			<div class="heromap__okko" aria-hidden="true">
 				<span class="heromap__gradient"></span>
 			</div>
 			<div class="heromap__map">
 				<div class="heromap__map-img">
-					<img fetchpriority="high" src="./assets/img/home/map-en.svg" width="1145" height="1034"
-						alt="Map of Europe with OKKO-Service branches">
+					<img fetchpriority="high" src="<?php echo esc_url( get_template_directory_uri() . $map_path ); ?>" width="1145" height="1034"
+						alt="<?php echo esc_attr__( 'Map of Europe with OKKO-Service branches', 'okko' ); ?>">
 					<button class="heromap__pin heromap__pin--upper" type="button" aria-expanded="false"
 						aria-controls="heromap-branch-upper" aria-label="OKKO-Service Perl"></button>
 					<button class="heromap__pin heromap__pin--lower" type="button" aria-expanded="false"
@@ -22,16 +45,16 @@ get_header();
 			</div>
 			<div class="heromap__branch" id="heromap-branch-upper" role="dialog"
 				aria-labelledby="heromap-branch-upper-title" hidden>
-				<button class="heromap__close" type="button" aria-label="Close">
+				<button class="heromap__close" type="button" aria-label="<?php echo esc_attr__( 'Close', 'okko' ); ?>">
 					<svg class="icon" width="6" height="7" aria-hidden="true" focusable="false">
-						<use href="./assets/img/spritemap.svg#sprite-close"></use>
+						<use href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-close' ); ?>"></use>
 					</svg>
 				</button>
 				<picture>
-					<source media="(max-width: 600px)" srcset="./assets/img/common/branch-perl-600.webp"
+					<source media="(max-width: 600px)" srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/img/common/branch-perl-600.webp' ); ?>"
 						type="image/webp">
 					<img class="heromap__photo" width="306" height="156" alt="OKKO-Service Perl" loading="lazy"
-						src="./assets/img/common/branch-perl.webp">
+						src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/common/branch-perl.webp' ); ?>">
 				</picture>
 				<div class="heromap__info">
 					<p class="heromap__name" id="heromap-branch-upper-title">OKKO-Service Perl</p>
@@ -39,42 +62,41 @@ get_header();
 						<p class="heromap__contact">
 							<span class="heromap__icon">
 								<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false">
-									<use href="./assets/img/spritemap.svg#sprite-pin-small"></use>
+									<use href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-pin-small' ); ?>"></use>
 								</svg>
 							</span>
 							<span class="heromap__value">
-								Trierer Str. 51, 66706 Perl
+								<?php echo esc_html( $contact_address ); ?>
 								<br>
-								49.4740, 6.37540
+								<?php echo esc_html( $contact_lat . ', ' . $contact_lng ); ?>
 							</span>
 						</p>
-						<a class="heromap__contact" href="tel:+4916097322294" aria-label="Call +49 160 97322294">
+						<a class="heromap__contact" href="tel:<?php echo esc_attr( $contact_phone_number ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Call %s', 'okko' ), $contact_phone ) ); ?>">
 							<span class="heromap__icon">
 								<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false">
-									<use href="./assets/img/spritemap.svg#sprite-phone"></use>
+									<use href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-phone' ); ?>"></use>
 								</svg>
 							</span>
-							<span class="heromap__value">+49 160 97322294</span>
+							<span class="heromap__value"><?php echo esc_html( $contact_phone ); ?></span>
 						</a>
 					</div>
 					<a class="heromap__route btn btn--yellow btn--full"
-						href="https://www.google.com/maps/dir/?api=1&amp;destination=49.4740,6.37540" target="_blank"
-						rel="noopener" aria-label="Get directions to OKKO-Service Perl (opens in a new tab)">Get
-						directions</a>
+						href="<?php echo esc_url( $contact_directions['url'] ); ?>" target="_blank"
+						rel="noopener" aria-label="<?php echo esc_attr( sprintf( __( '%s to OKKO-Service Perl (opens in a new tab)', 'okko' ), $contact_directions_title ) ); ?>"><?php echo esc_html( $contact_directions_title ); ?></a>
 				</div>
 			</div>
 			<div class="heromap__branch" id="heromap-branch-lower" role="dialog"
 				aria-labelledby="heromap-branch-lower-title" hidden>
-				<button class="heromap__close" type="button" aria-label="Close">
+				<button class="heromap__close" type="button" aria-label="<?php echo esc_attr__( 'Close', 'okko' ); ?>">
 					<svg class="icon" width="6" height="7" aria-hidden="true" focusable="false">
-						<use href="./assets/img/spritemap.svg#sprite-close"></use>
+						<use href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-close' ); ?>"></use>
 					</svg>
 				</button>
 				<picture>
-					<source media="(max-width: 600px)" srcset="./assets/img/common/branch-perl-600.webp"
+					<source media="(max-width: 600px)" srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/img/common/branch-perl-600.webp' ); ?>"
 						type="image/webp">
 					<img class="heromap__photo" width="306" height="156" alt="OKKO-Service Perl" loading="lazy"
-						src="./assets/img/common/branch-perl.webp">
+						src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/common/branch-perl.webp' ); ?>">
 				</picture>
 				<div class="heromap__info">
 					<p class="heromap__name" id="heromap-branch-lower-title">OKKO-Service Perl</p>
@@ -82,49 +104,47 @@ get_header();
 						<p class="heromap__contact">
 							<span class="heromap__icon">
 								<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false">
-									<use href="./assets/img/spritemap.svg#sprite-pin-small"></use>
+									<use href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-pin-small' ); ?>"></use>
 								</svg>
 							</span>
 							<span class="heromap__value">
-								Trierer Str. 51, 66706 Perl
+								<?php echo esc_html( $contact_address ); ?>
 								<br>
-								49.4740, 6.37540
+								<?php echo esc_html( $contact_lat . ', ' . $contact_lng ); ?>
 							</span>
 						</p>
-						<a class="heromap__contact" href="tel:+4916097322294" aria-label="Call +49 160 97322294">
+						<a class="heromap__contact" href="tel:<?php echo esc_attr( $contact_phone_number ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Call %s', 'okko' ), $contact_phone ) ); ?>">
 							<span class="heromap__icon">
 								<svg class="icon" width="16" height="16" aria-hidden="true" focusable="false">
-									<use href="./assets/img/spritemap.svg#sprite-phone"></use>
+									<use href="<?php echo esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-phone' ); ?>"></use>
 								</svg>
 							</span>
-							<span class="heromap__value">+49 160 97322294</span>
+							<span class="heromap__value"><?php echo esc_html( $contact_phone ); ?></span>
 						</a>
 					</div>
 					<a class="heromap__route btn btn--yellow btn--full"
-						href="https://www.google.com/maps/dir/?api=1&amp;destination=49.4740,6.37540" target="_blank"
-						rel="noopener" aria-label="Get directions to OKKO-Service Perl (opens in a new tab)">Get
-						directions</a>
+						href="<?php echo esc_url( $contact_directions['url'] ); ?>" target="_blank"
+						rel="noopener" aria-label="<?php echo esc_attr( sprintf( __( '%s to OKKO-Service Perl (opens in a new tab)', 'okko' ), $contact_directions_title ) ); ?>"><?php echo esc_html( $contact_directions_title ); ?></a>
 				</div>
 			</div>
 			<div class="heromap__backdrop" hidden></div>
 			<div class="heromap__container">
 				<h1 class="heromap__title title title--hero">
-					BOOK A SERVICE
-					<br>
-					APPOINTMENT
+					<?php echo nl2br( esc_html( okko_text( 'hero_title', "BOOK A SERVICE\nAPPOINTMENT" ) ) ); ?>
 				</h1>
 				<div class="heromap__card card card--sm">
 					<p class="heromap__copy text text--muted">
-						Fill out the form — we’ll call you back, arrange a convenient time, and let you know
-						approximately how long the repair will take. If it’s urgent, it’s best to call us directly.
+						<?php echo nl2br( esc_html( okko_text( 'hero_text', 'Fill out the form — we’ll call you back, arrange a convenient time, and let you know approximately how long the repair will take. If it’s urgent, it’s best to call us directly.' ) ) ); ?>
 					</p>
 					<div class="heromap__actions">
-						<a class="heromap__button btn btn--yellow btn--full" href="tel:+4916097322294"
-							aria-label="Call +49 160 97322294">+49 160 97322294</a>
+						<a class="heromap__button btn btn--yellow btn--full" href="tel:<?php echo esc_attr( $contact_phone_number ); ?>"
+							aria-label="<?php echo esc_attr( sprintf( __( 'Call %s', 'okko' ), $contact_phone ) ); ?>"><?php echo esc_html( $contact_phone ); ?></a>
 					</div>
 				</div>
 			</div>
 		</section>
+		<?php endif; ?>
+		<?php if ( okko_section_is_visible( 'show_request' ) ) : ?>
 		<section data-att-request="" class="request request--wide">
 			<div class="request__container">
 				<?php get_template_part( 'template-parts/request-card' ); ?>
@@ -151,6 +171,7 @@ get_header();
 				</div>
 			</div>
 		</section>
+		<?php endif; ?>
 	</div>
 </main>
 <?php get_footer(); ?>
