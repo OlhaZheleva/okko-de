@@ -24,9 +24,9 @@
         { "key": "field_okko_waiting_tab_request", "label": "Request Info", "name": "", "type": "tab", "placement": "top", "endpoint": 0 },
         { "key": "field_okko_waiting_show_request", "label": "Show Request Section", "name": "show_request", "type": "true_false", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "ui": 1, "default_value": 1 },
         { "key": "field_okko_waiting_request_call_badge", "label": "Phone Card Badge", "name": "request_call_badge", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
-        { "key": "field_okko_waiting_request_call_text", "label": "Phone Card Text", "name": "request_call_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" },
+        { "key": "field_okko_waiting_request_call_text", "label": "Phone Card Text", "name": "request_call_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" },
         { "key": "field_okko_waiting_request_next_title", "label": "Next Steps Title", "name": "request_next_title", "type": "text", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" } },
-        { "key": "field_okko_waiting_request_next_text", "label": "Next Steps Text", "name": "request_next_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "br" }
+        { "key": "field_okko_waiting_request_next_text", "label": "Next Steps Text", "name": "request_next_text", "type": "textarea", "instructions": "", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "new_lines": "" }
     ],
     "location": [[{ "param": "page_template", "operator": "==", "value": "templates/page-waiting.php" }]],
     "menu_order": 0,
@@ -38,5 +38,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1794486393
+    "modified": 1795517187
 }

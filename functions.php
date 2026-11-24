@@ -22,6 +22,7 @@ require_once get_template_directory() . '/inc/menus.php';
 require_once get_template_directory() . '/inc/cpt.php';
 require_once get_template_directory() . '/inc/services.php';
 require_once get_template_directory() . '/inc/enqueue.php';
+require_once get_template_directory() . '/inc/cf7.php';
 
  
 // add svg format

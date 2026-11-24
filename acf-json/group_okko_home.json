@@ -778,6 +778,34 @@
                     "parent_repeater": "field_okko_home_review_items"
                 }
             ]
+        },
+        {
+            "key": "field_okko_home_tab_request",
+            "label": "Request",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_home_request_label",
+            "label": "Section Label",
+            "name": "request_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
+        },
+        {
+            "key": "field_okko_home_request_title",
+            "label": "Title",
+            "name": "request_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" }
         }
     ],
     "location": [[{ "param": "page_type", "operator": "==", "value": "front_page" }]],
@@ -790,5 +818,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1794409629
+    "modified": 1795517187
 }

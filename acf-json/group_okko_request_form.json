@@ -1,0 +1,28 @@
+{
+    "key": "group_okko_request_form",
+    "title": "Request form",
+    "fields": [
+        { "key": "field_okko_request_form_request_form", "label": "Request form", "name": "request_form", "type": "select", "instructions": "Leave empty to use the default form for this language (Theme settings → Forms).", "required": 0, "conditional_logic": 0, "wrapper": { "width": "", "class": "", "id": "" }, "choices": {}, "default_value": false, "allow_null": 1, "multiple": 0, "ui": 0, "return_format": "value", "ajax": 0, "placeholder": "" }
+    ],
+    "location": [
+        [{ "param": "page_type", "operator": "==", "value": "front_page" }],
+        [{ "param": "page_template", "operator": "==", "value": "templates/page-about.php" }],
+        [{ "param": "page_template", "operator": "==", "value": "templates/page-booking.php" }],
+        [{ "param": "page_template", "operator": "==", "value": "templates/page-contacts.php" }],
+        [{ "param": "page_template", "operator": "==", "value": "templates/page-fleet.php" }],
+        [{ "param": "page_template", "operator": "==", "value": "templates/page-roadside.php" }],
+        [{ "param": "page_template", "operator": "==", "value": "templates/page-services.php" }],
+        [{ "param": "page_template", "operator": "==", "value": "templates/page-waiting.php" }],
+        [{ "param": "post_type", "operator": "==", "value": "service" }]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ["the_content"],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1795517187
+}
