@@ -23,26 +23,27 @@ class Okko_Footer_Menu_Walker extends Walker_Nav_Menu {
 	}
 }
 
+
 /**
  * Header main menu (location `header_main`).
  * Outputs the same markup as the static header: top-level items `menu__item` / `menu__link`,
  * items with children become dropdowns (`menu__item--sub` + `menu__sub`), max 2 levels.
- * A dropdown under the "All services" page (template page-services.php) gets the
- * "View all services" button automatically.
+ * A child item leading to the "All services" page is shown as the blue "View all services" button.
+ * If there is no such item but the parent itself is the "All services" page, the button is added automatically.
  */
 class Okko_Header_Menu_Walker extends Walker_Nav_Menu {
 	private $parent = null;
+	private $has_all_button = false;
 
 	public function start_lvl( &$output, $depth = 0, $args = null ) {
+		$this->has_all_button = false;
 		$id = $this->parent ? 'header-sub-' . $this->parent->ID : 'header-sub';
 		$output .= '<ul class="menu__sub" id="' . esc_attr( $id ) . '" hidden>';
 	}
 
 	public function end_lvl( &$output, $depth = 0, $args = null ) {
-		if ( $this->parent && okko_menu_item_is_services_page( $this->parent ) ) {
-			$output .= '<li><a href="' . esc_url( $this->parent->url ) . '" class="menu__all btn btn--blue">'
-				. '<svg class="icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="' . esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-eye-scan' ) . '"></use></svg>'
-				. esc_html__( 'View all services', 'okko' ) . '</a></li>';
+		if ( ! $this->has_all_button && $this->parent && okko_menu_item_is_services_page( $this->parent ) ) {
+			$output .= '<li>' . okko_menu_all_button( $this->parent->url, __( 'View all services', 'okko' ) ) . '</li>';
 		}
 		$output .= '</ul>';
 	}
@@ -76,6 +77,10 @@ class Okko_Header_Menu_Walker extends Walker_Nav_Menu {
 				$attrs .= ' aria-expanded="false" aria-controls="' . esc_attr( 'header-sub-' . $item->ID ) . '"';
 			}
 			$output .= '<li class="' . esc_attr( $li_class ) . '"><a class="menu__link"' . $attrs . '>' . esc_html( $title ) . '</a>';
+		} elseif ( okko_menu_item_is_services_page( $item ) ) {
+			// "All services" item → blue button with icon, text = menu item title.
+			$this->has_all_button = true;
+			$output .= '<li>' . okko_menu_all_button( $item->url, $title );
 		} else {
 			$output .= '<li><a class="menu__sublink"' . $attrs . '>' . esc_html( $title ) . '</a>';
 		}
@@ -86,10 +91,41 @@ class Okko_Header_Menu_Walker extends Walker_Nav_Menu {
 	}
 }
 
-// Menu item points to the "All services" page (any language).
+// Menu item leads to the "All services" page (any language):
+// a page with template page-services.php, or a custom link with that page's URL.
 function okko_menu_item_is_services_page( $item ) {
-	return 'post_type' === $item->type && 'page' === $item->object
-		&& 'templates/page-services.php' === get_page_template_slug( (int) $item->object_id );
+	if ( 'post_type' === $item->type && 'page' === $item->object ) {
+		return 'templates/page-services.php' === get_page_template_slug( (int) $item->object_id );
+	}
+	if ( 'custom' === $item->type && ! empty( $item->url ) ) {
+		static $services_paths = null;
+		if ( null === $services_paths ) {
+			$services_paths = array( '/services' );
+			$url = okko_template_page_url( 'templates/page-services.php', '/services/' );
+			$services_paths[] = untrailingslashit( (string) wp_parse_url( $url, PHP_URL_PATH ) );
+		}
+		$path = untrailingslashit( (string) wp_parse_url( $item->url, PHP_URL_PATH ) );
+		$home = untrailingslashit( (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH ) );
+		if ( $home && 0 === strpos( $path, $home ) ) {
+			$path = substr( $path, strlen( $home ) );
+		}
+		foreach ( $services_paths as $services_path ) {
+			if ( $home && 0 === strpos( $services_path, $home ) ) {
+				$services_path = substr( $services_path, strlen( $home ) );
+			}
+			if ( $path === $services_path ) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+// Blue "View all services" button of the header dropdown (markup from the original header).
+function okko_menu_all_button( $url, $title ) {
+	return '<a href="' . esc_url( $url ) . '" class="menu__all btn btn--blue">'
+		. '<svg class="icon" width="20" height="20" aria-hidden="true" focusable="false"><use href="' . esc_url( get_template_directory_uri() . '/assets/img/spritemap.svg#sprite-eye-scan' ) . '"></use></svg>'
+		. esc_html( $title ) . '</a>';
 }
 
 // URL of the page with the given template, in the current language (Polylang); $fallback if not found.
