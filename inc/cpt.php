@@ -17,6 +17,7 @@ function okko_register_services() {
             'not_found_in_trash' => 'No services found in Trash',
         ),
         'public' => true,
+        'show_in_nav_menus' => true,
         'show_in_rest' => true,
         'supports' => array( 'title', 'thumbnail', 'page-attributes' ),
         'rewrite' => array( 'slug' => 'services', 'with_front' => false ),

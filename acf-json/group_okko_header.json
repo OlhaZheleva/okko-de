@@ -1,0 +1,94 @@
+{
+    "key": "group_okko_header",
+    "title": "Options: Header",
+    "fields": [
+        {
+            "key": "field_okko_header_tab_en",
+            "label": "EN",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_header_book_link",
+            "label": "Book Now button",
+            "name": "header_book_link",
+            "type": "link",
+            "instructions": "Text and link of the \"Book Now\" button in the header. Empty — \"Book Now\" leading to the Booking page of this language.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_okko_header_tab_de",
+            "label": "DE",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_header_book_link_de",
+            "label": "Book Now button",
+            "name": "header_book_link_de",
+            "type": "link",
+            "instructions": "Text and link of the \"Book Now\" button in the header. Empty — \"Book Now\" leading to the Booking page of this language.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_okko_header_tab_lt",
+            "label": "LT",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_okko_header_book_link_lt",
+            "label": "Book Now button",
+            "name": "header_book_link_lt",
+            "type": "link",
+            "instructions": "Text and link of the \"Book Now\" button in the header. Empty — \"Book Now\" leading to the Booking page of this language.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1795620000
+}

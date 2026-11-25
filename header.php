@@ -39,26 +39,42 @@
     <div class="wrapper">
         <header data-att-header="" data-att-header-scroll="100" class="header">
             <div class="header__container">
-                <a href="tel:+4916097322294" class="header__phone btn btn--yellow"
-                    aria-label="Call OKKO-Service: +49 160 97322294">+49 160 97322294</a>
-                <button type="button" data-att-menu="" class="header__icon icon-menu" aria-label="Menu"
+                <?php
+                $header_phone = okko_text( 'contact_phone', '+49 160 97322294', 'option' );
+                $header_book = okko_header_book_link();
+                ?>
+                <a href="<?php echo esc_attr( 'tel:' . preg_replace( '/[^0-9+]/', '', $header_phone ) ); ?>" class="header__phone btn btn--yellow"
+                    aria-label="<?php echo esc_attr( sprintf( __( 'Call %s', 'okko' ), $header_phone ) ); ?>"><?php echo esc_html( $header_phone ); ?></a>
+                <button type="button" data-att-menu="" class="header__icon icon-menu" aria-label="<?php esc_attr_e( 'Menu', 'okko' ); ?>"
                     aria-expanded="false" aria-controls="header-menu">
                     <span class="icon-menu__lines">
                         <span></span>
                         <span></span>
                     </span>
-                    <span class="icon-menu__txt">Menu</span>
+                    <span class="icon-menu__txt"><?php esc_html_e( 'Menu', 'okko' ); ?></span>
                 </button>
                 <div class="header__menu menu" id="header-menu">
                     <div class="menu__body">
-                        <a href="/" class="menu__logo" aria-label="OKKO-Service: home page">
+                        <a href="<?php echo esc_url( okko_home_url() ); ?>" class="menu__logo" aria-label="<?php esc_attr_e( 'OKKO-Service: home page', 'okko' ); ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-dr.svg" width="207"
                                 height="54" alt="OKKO-Service">
                         </a>
-                        <nav class="menu__nav" aria-label="Main menu">
+                        <nav class="menu__nav" aria-label="<?php esc_attr_e( 'Main menu', 'okko' ); ?>">
+                            <?php if ( has_nav_menu( 'header_main' ) ) : ?>
+                                <?php
+                                wp_nav_menu( array(
+                                    'theme_location' => 'header_main',
+                                    'container'      => false,
+                                    'depth'          => 2,
+                                    'items_wrap'     => '<ul class="menu__list">%3$s</ul>',
+                                    'fallback_cb'    => false,
+                                    'walker'         => new Okko_Header_Menu_Walker(),
+                                ) );
+                                ?>
+                            <?php else : ?>
                             <ul class="menu__list">
                                 <li class="menu__item menu__item--sub">
-                                    <a href="services.html" class="menu__link" aria-label="Services"
+                                    <a href="/services/" class="menu__link" aria-label="Services"
                                         aria-expanded="false" aria-controls="header-services">Services</a>
                                     <ul class="menu__sub" id="header-services" hidden>
                                         <li>
@@ -116,8 +132,9 @@
                                     <a href="/contacts/" class="menu__link" aria-label="Contacts">Contacts</a>
                                 </li>
                             </ul>
+                            <?php endif; ?>
                         </nav>
-                        <a href="/booking/" class="menu__book btn" aria-label="Book Now">Book Now</a>
+                        <a href="<?php echo esc_url( $header_book['url'] ); ?>" class="menu__book btn"<?php echo $header_book['target'] ? ' target="' . esc_attr( $header_book['target'] ) . '" rel="noopener"' : ''; ?>><?php echo esc_html( $header_book['title'] ); ?></a>
                     </div>
                 </div>
             </div>

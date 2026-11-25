@@ -7,7 +7,8 @@
 // Підключення класичного редактора WP
 add_filter('use_block_editor_for_post_type', '__return_false');
 
-register_nav_menus( array( // Регистрируем 2 меню
+register_nav_menus( array(
+	'header_main' => 'Header: Main menu',
 	'footer_services' => 'Footer: Services',
 	'footer_company' => 'Footer: Company',
 ) );
